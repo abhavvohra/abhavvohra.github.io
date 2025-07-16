@@ -1,0 +1,103 @@
+\documentclass[10pt, letterpaper]{article}
+\pdfgentounicode=1
+
+\usepackage[
+    ignoreheadfoot,
+    top=2cm, bottom=1.5cm, left=1.5cm, right=1.5cm, footskip=0cm
+]{geometry}
+
+\usepackage{titlesec, tabularx, array, enumitem, fontawesome5, amsmath, hyperref, paracol, fancyhdr, parskip, multicol}
+
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\hypersetup{
+    pdftitle={Abhav Vohra's CV},
+    pdfauthor={Abhav Vohra},
+    colorlinks=true,
+    urlcolor=black,
+    hidelinks
+}
+
+\pagestyle{empty}
+
+\titleformat{\section}{\bfseries\large}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{0.3cm}{0.2cm}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{ABHAV VOHRA}}\\[4pt]
+    (347) 416-7797 \quad 
+    voh.abhav@gmail.com \quad
+    github.com/abhavvohra \quad
+    linkedin.com/in/abhavvohra \quad
+    abhavvohra.github.io \quad
+    Brooklyn, NY 
+\end{center}
+
+\section{EDUCATION}
+\textbf{M.S. in Computer Engineering,} New York University \hfill Sept 2022 – Dec 2024 \\
+\textit{Relevant Coursework: Data Structures, Deep Learning, Reinforcement Learning, Advanced ML,} \hfill GPA: 3.67/4.0 \\
+\textit{Large Language Models, Natural Language Processing, Probability \& Stochastic Processes} 
+\\
+\textbf{B.Tech in Electronics and Communication Engineering,} GGSIPU Delhi, India \hfill Aug 2017 – June 2021 
+
+
+
+\section{WORK EXPERIENCE}
+
+\textbf{AI Systems Engineer,} Easley Dunn Productions, Inc. (Remote, US) \hfill June 2025 - Present
+\vspace{-0.5em}
+\begin{itemize}[leftmargin=*, itemsep=0pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+\item Developed multi-agent deep reinforcement learning system for Monster Gridiron, a Unity-based American football game, implementing PPO (Proximal Policy Optimization) networks with Unity ML-Agents to enable intelligent offensive team control.
+\item Implemented self-play training architecture enabling agents to learn coordinated offensive strategies through iterative competition against defensive opponents.
+\end{itemize}
+
+\textbf{AI Engineer (Intern),} Treevah LLC (Remote, US) \hfill Feb 2025 - May 2025 
+\vspace{-0.5em}
+\begin{itemize}[leftmargin=*, itemsep=0pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+\item Developed an intelligent file organization system leveraging OpenAI GPT-4o and LangGraph to create an automated workflow that analyzes uploaded text documents, extracts semantic content, and categorizes files based on content similarity.
+\item Implemented human-in-the-loop validation with user confirmation prompts before file transfers to ensure accuracy and user control.
+\end{itemize}
+
+
+\textbf{ML Engineer,} Vitalth Forgers Pvt. Ltd. (New Delhi, India)  \hfill May 2022 - Aug 2022 
+\vspace{-0.5em}
+\begin{itemize}[leftmargin=*, itemsep=0pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+  \item Developed influenza detection system using fine-tuned transformer models on vital sign time-series data (temperature, Pulse, Respiratory Rate, SpO2), achieving 88\% accuracy.
+  \item Implemented an LSTM network for influenza classification, processing sequential vital sign data to distinguish flu from other respiratory conditions with 18\% reduction in false positives.
+\end{itemize}
+\textbf{Software Engineer,} Antriksh Labs Pvt. Ltd. (Remote, India) \hfill June 2020 - Dec 2021 
+\vspace{-0.5em}
+\begin{itemize}[leftmargin=*, itemsep=0pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+\item Developed end-to-end anomaly detection pipeline using scikit-learn, and unsupervised learning to analyze sensor data from robotics equipment, predicting failures with 85\% accuracy and optimizing maintenance schedules.
+\item Built time-series forecasting models with PyTorch for multi-sensor IoT data streams, creating real-time dashboards that achieved 30\% reduction in unplanned downtime across robotics automation systems.
+\end{itemize}
+
+\section{PROJECTS}
+
+\textbf{Arxiv Research Agent} 
+\vspace{-0.5em}
+\begin{itemize}[leftmargin=*, itemsep=0pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+\item Developed an automated academic research system using LangGraph's multi-agent architecture, integrating ArXiv API with StateGraph orchestration to streamline scholarly paper retrieval, analysis, and synthesis for researchers and academics.
+\item Built comprehensive workflow  that leverages reflection agents for iterative improvement, vector database integration for semantic search, and structured report generation with proper citations to enhance research productivity and accuracy.
+\end{itemize}
+
+\textbf{Multi-Agent Technical Documentation RAG System} 
+\vspace{-0.5em}
+\begin{itemize}[leftmargin=*, itemsep=0pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+\item Built a technical documentation assistant using AI agents (API, code generation, troubleshooting), processing open-source codebases with query routing and parallel execution to provide comprehensive developer solutions.
+\item Deployed FastAPI service with ChromaDB vector database, semantic chunking strategies, and confidence scoring systems for multi-domain knowledge synthesis.
+\end{itemize}
+
+\section{TECHNICAL SKILLS}
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+    \textbf{Programming Languages:} & Python , SQL , C, C++, C\#\\
+    \textbf{ML/AI Frameworks:} & PyTorch , Scikit-learn, Hugging Face Transformers, SpaCy, XGBoost, OpenCV\\
+    \textbf{AI/LLM Engineering:} & LangChain, LangGraph, LlamaIndex, CrewAI, Neo4j, RAG Systems, Graph RAG\\
+    \textbf{MLOps \& Development:} & MLflow, Weights \& Biases, Gradio, FastAPI, Docker, Kubernetes, Jupyter, PySpark, AWS (SageMaker, EC2), Git, CI/CD (Jenkins/GitHub Actions), Airflow\\
+    \textbf{Deep Learning \& Architecture:} & Transformers, Attention Mechanisms, Natural Language Processing (NLP), CNNs, GANs, VAEs, Diffusion Models, Graph Neural Networks,  Multi-modal Models, Large Language Models (LLMs), RAGs, Prompt Engineering\\
+\end{tabularx}
+
+\end{document}
