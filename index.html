@@ -16,9 +16,10 @@
         }
 
         h1 {
-            font-size: 2rem;
-            font-weight: 600;
+            font-size: 2.5rem;
+            font-weight: 1000;
             margin-bottom: 0;
+            text-transform: uppercase;
         }
 
         .contact-info {
@@ -81,14 +82,57 @@
             color: #666;
             margin-bottom: 10px;
         }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .header-text {
+            flex-grow: 1;
+        }
+
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: 40px;
+        }
+
+        .resume-button {
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            margin-bottom: 50px;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .resume-button:hover {
+            background-color: #333;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-    <h1>Abhav Vohra</h1>
-    <h6 class="job-title">ML/AI Engineer</h6>
-    <div class="contact-info">
-        <a href="https://github.com/abhavvohra">GitHub</a> | <a href="https://linkedin.com/in/abhavvohra">LinkedIn</a> | <a href="mailto:voh.abhav@gmail.com">voh.abhav@gmail.com</a> | (347) 416-7797 | Brooklyn, NY
+    <div class="header">
+        <div class="header-text">
+            <h1>Abhav Vohra</h1>
+            <h6 class="job-title">ML/AI Engineer</h6>
+            <div class="contact-info">
+                (347)416-7797 | <a href="mailto:voh.abhav@gmail.com">voh.abhav@gmail.com</a> | <a href="https://github.com/abhavvohra">GitHub</a> | <a href="https://linkedin.com/in/abhavvohra">LinkedIn</a> |   Brooklyn, NY
+            </div>
+        </div>
+        <img src="display-picture.jpg" alt="Abhav Vohra" class="profile-picture">
     </div>
+    <a href="resume.pdf" target="_blank" class="resume-button">Resume</a>
     
     <p>I build intelligent systems that solve real-world problems through advanced machine learning and multi-agent architectures.</p>
     
@@ -100,76 +144,14 @@
     
     <p>Always eager to collaborate on challenging AI projects that push the boundaries of what's possible with machine learning and artificial intelligence.</p>
 
-    <h2>Projects</h2>
+    <div id="projects-container"></div>
 
-    <h3>Arxiv Research Agent</h3>
-    <div class="project-meta">Python | <a href="https://github.com/abhavvohra/Arxiv-Research-Agent">GitHub</a></div>
-    <ul>
-        <li>Developed automated academic research system using LangGraph's multi-agent architecture with ArXiv API integration and StateGraph orchestration</li>
-        <li>Built comprehensive workflow with reflection agents for iterative improvement, vector database integration for semantic search, and structured report generation</li>
-        <li>Features specialized agents for paper retrieval, semantic search, analysis, synthesis, and quality assessment with temporal research trend analysis</li>
-    </ul>
-
-    <h3>Technical Documentation Agent System</h3>
-    <div class="project-meta">Python | <a href="https://github.com/abhavvohra/Technical-Documentation-Agent-System">GitHub</a></div>
-    <ul>
-        <li>Built AI-powered system for intelligent, context-aware responses to technical documentation queries with multi-agent architecture</li>
-        <li>Deployed FastAPI service with ChromaDB vector database, semantic chunking strategies, and confidence scoring systems</li>
-        <li>Implemented specialized agents for API usage, code examples, and troubleshooting with comprehensive Prometheus metrics monitoring</li>
-    </ul>
-
-    <h3>BERT Paper Implementation</h3>
-    <div class="project-meta">Jupyter Notebook | <a href="https://github.com/abhavvohra/BERT-Paper-Implementation">GitHub</a></div>
-    <ul>
-        <li>Complete implementation of the original BERT (Bidirectional Encoder Representations from Transformers) research paper</li>
-        <li>Educational project focused on reproducing BERT model architecture and functionality for transformer-based NLP learning</li>
-        <li>Comprehensive implementation with detailed documentation for understanding attention mechanisms and bidirectional encoding</li>
-    </ul>
-
-    <h3>GNN Recommender System</h3>
-    <div class="project-meta">Jupyter Notebook | <a href="https://github.com/abhavvohra/GNN-Recommender-System">GitHub</a></div>
-    <ul>
-        <li>Graph Neural Network-based movie recommendation system using the MovieLens dataset with modular component architecture</li>
-        <li>Features comprehensive implementation with separate scripts for data loading, model training, evaluation, and hyperparameter tuning</li>
-        <li>Leverages graph structures to capture complex user-item relationships and collaborative filtering patterns</li>
-    </ul>
-
-    <h3>GAN Implementation</h3>
-    <div class="project-meta">Python | <a href="https://github.com/abhavvohra/GAN-implementation">GitHub</a></div>
-    <ul>
-        <li>Comprehensive PyTorch implementation of 5 different GAN architectures (Vanilla GAN, DCGAN, CycleGAN, WGAN, StyleGAN)</li>
-        <li>Features modular design with organized directories for models and utilities, flexible training script for educational comparison</li>
-        <li>Trained on MNIST dataset with detailed documentation comparing different GAN variants and their performance characteristics</li>
-    </ul>
-
-    <h3>X-ray Fracture Classification</h3>
-    <div class="project-meta">Jupyter Notebook | <a href="https://github.com/abhavvohra/X-ray-Fracture-Classification">GitHub</a></div>
-    <ul>
-        <li>Deep learning project for automated bone fracture detection using X-ray scans from Stanford MURA dataset</li>
-        <li>Currently implements ResNet50-based binary classification with plans for U-Net, Attention U-Net, DenseNet, and Vision Transformers</li>
-        <li>Aims to develop advanced diagnostic support tools for medical professionals with high accuracy and reliability</li>
-    </ul>
-
-    <h3>Sudden Infant Death Syndrome Detector</h3>
-    <div class="project-meta">C | <a href="https://github.com/abhavvohra/Sudden-Infant-Death-Syndrome-Detector">GitHub</a></div>
-    <ul>
-        <li>Real-time embedded systems project for monitoring infant breathing patterns using Adafruit SHT40 humidity sensor</li>
-        <li>Detects breathing irregularities by tracking humidity changes with two-tier alarm system (Yellow: <5 breaths/10sec, Red: 0 breaths/10sec)</li>
-        <li>Created for NYU Tandon ECE-GY 6483 Real Time Embedded Systems course with focus on safety-critical system design</li>
-    </ul>
-
-    <h3>LLM Jailbreaking Research</h3>
-    <div class="project-meta">Python | <a href="https://github.com/abhavvohra/LLM-Jailbreaking">GitHub</a></div>
-    <ul>
-        <li>Research project implementing the KOV Algorithm for optimizing adversarial suffixes in Large Language Models</li>
-        <li>Uses NGCG (Next Generation Contextual Generation) algorithm to balance negative log-likelihood for inducing specific behaviors</li>
-        <li>Academic exploration of LLM behavior manipulation while maintaining natural language coherence through log-perplexity calculations</li>
-    </ul>
-    
-    <div class="footer">
-        <p>Abhav Vohra, Brooklyn, NY</p>
-        <p>July 2025</p>
-        <p><a href="mailto:voh.abhav@gmail.com">voh.abhav@gmail.com</a> | <a href="https://github.com/abhavvohra">GitHub</a> | <a href="https://linkedin.com/in/abhavvohra">LinkedIn</a> | (347) 416-7797</p>
-    </div>
+    <script>
+        fetch('projects.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('projects-container').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
