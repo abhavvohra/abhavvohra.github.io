@@ -52,16 +52,16 @@
             background-color: var(--bg-color);
             max-width: 800px;
             margin: 0 auto;
-            margin-top: 20px;
-            padding: 40px 20px;
+            padding: 60px 20px 40px 20px;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         @media (min-width: 768px) {
             body {
-                padding: 40px 20px;
+                padding: 80px 20px 40px 20px;
             }
         }
+
 
         .theme-toggle-container {
             position: fixed;
@@ -652,7 +652,7 @@
         .hobbies-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
             gap: 15px;
             margin-top: 30px;
             width: 100%;
@@ -901,19 +901,12 @@
             </div>
             <div class="hobbies-grid">
                 <div class="hobby-card">
-                    <img src="Hobbies/1.jpg" alt="Hobby">
-                </div>
-                <div class="hobby-card">
                     <video src="Hobbies/2.mp4" muted loop autoplay></video>
                 </div>
                 
                 <div class="hobby-card">
                     <img src="Hobbies/3.jpg" alt="Hobby">
-                </div>
-                
-                <div class="hobby-card">
-                    <img src="Hobbies/4.jpeg" alt="Hobby">
-                </div>
+                </div>            
                 
                 <div class="hobby-card">
                     <video src="Hobbies/5.mp4" muted loop autoplay></video>
@@ -928,10 +921,6 @@
                 </div>
                 
                 <div class="hobby-card">
-                    <img src="Hobbies/8.jpeg" alt="Hobby">
-                </div>
-                
-                <div class="hobby-card">
                     <img src="Hobbies/9.jpeg" alt="Hobby">
                 </div>
                 
@@ -942,10 +931,7 @@
                 <div class="hobby-card">
                     <img src="Hobbies/11.jpeg" alt="Hobby">
                 </div>
-
-                <div class="hobby-card">
-                    <img src="Hobbies/12.jpeg" alt="Hobby">
-                </div>
+            </div>
             </div>
         </div>
     </section>
@@ -981,6 +967,9 @@
                 // Moon icon (dark mode)
                 themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
             }
+            
+            // Ensure page loads at top
+            window.scrollTo(0, 0);
         });
 
         // Back to top button functionality
