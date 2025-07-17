@@ -52,16 +52,16 @@
             background-color: var(--bg-color);
             max-width: 800px;
             margin: 0 auto;
-            padding: 60px 20px 40px 20px;
+            margin-top: 20px;
+            padding: 40px 20px;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         @media (min-width: 768px) {
             body {
-                padding: 80px 20px 40px 20px;
+                padding: 40px 20px;
             }
         }
-
 
         .theme-toggle-container {
             position: fixed;
@@ -201,22 +201,18 @@
         .header {
             display: flex;
             justify-content: space-between;
-            align-items: flex-start;
+            align-items: center;
             margin-bottom: 40px;
             animation: fadeInUp 0.6s ease;
         }
 
         .header-text {
             flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: clamp(200px, 20vw, 300px);
         }
 
         .profile-picture {
-            width: clamp(200px, 20vw, 300px);
-            height: clamp(200px, 20vw, 300px);
+            width: clamp(150px, 20vw, 200px);
+            height: clamp(150px, 20vw, 200px);
             border-radius: 50%;
             object-fit: cover;
             margin-left: 40px;
@@ -656,7 +652,7 @@
         .hobbies-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
             gap: 15px;
             margin-top: 30px;
             width: 100%;
@@ -790,7 +786,7 @@
                 Brooklyn, NY
             </div>
         </div>
-        <img src="display-picture.png" alt="Abhav Vohra, ML/AI Engineer" class="profile-picture">
+        <img src="display-picture.jpg" alt="Abhav Vohra, ML/AI Engineer" class="profile-picture">
     </header>
     
     <a href="resume.pdf" target="_blank" class="resume-button">Download Resume</a>
@@ -892,52 +888,12 @@
         <div id="projects-container"></div>
     </section>
 
-    <!-- Hobbies Section -->
-    <section class="hobbies-section">
-        <button class="hobbies-toggle" onclick="toggleHobbies()">
-            <span>More about me!</span>
-            <span class="arrow">▼</span>
-        </button>
-        
-        <div class="hobbies-content" id="hobbies-content">
-            <div class="hobbies-text">
-            Outside of work, I enjoy experimenting in the kitchen, exploring music and film, and spending time in nature.
-            </div>
-            <div class="hobbies-grid">
-                <div class="hobby-card">
-                    <video src="Hobbies/2.mp4" muted loop autoplay></video>
-                </div>
-                
-                <div class="hobby-card">
-                    <img src="Hobbies/3.jpg" alt="Hobby">
-                </div>            
-                
-                <div class="hobby-card">
-                    <video src="Hobbies/5.mp4" muted loop autoplay></video>
-                </div>
-   
-                <div class="hobby-card">
-                    <img src="Hobbies/6.jpg" alt="Hobby">
-                </div>
-                
-                <div class="hobby-card">
-                    <img src="Hobbies/7.jpeg" alt="Hobby">
-                </div>
-                
-                <div class="hobby-card">
-                    <img src="Hobbies/9.jpeg" alt="Hobby">
-                </div>
-                
-                <div class="hobby-card">
-                    <img src="Hobbies/10.jpeg" alt="Hobby">
-                </div>
-                
-                <div class="hobby-card">
-                    <img src="Hobbies/11.jpeg" alt="Hobby">
-                </div>
-            </div>
-            </div>
-        </div>
+    <!-- Hobbies Button -->
+    <section class="education-experience-section">
+        <a href="hobbies.html" class="education-experience-button">
+            <span>View Hobbies</span>
+            <span class="arrow">→</span>
+        </a>
     </section>
 
     <button class="back-to-top" onclick="scrollToTop()">↑</button>
@@ -971,9 +927,6 @@
                 // Moon icon (dark mode)
                 themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
             }
-            
-            // Ensure page loads at top
-            window.scrollTo(0, 0);
         });
 
         // Back to top button functionality
@@ -993,15 +946,6 @@
                 backToTop.classList.remove('show');
             }
         });
-
-        // Hobbies toggle functionality
-        function toggleHobbies() {
-            const content = document.getElementById('hobbies-content');
-            const toggle = document.querySelector('.hobbies-toggle');
-            
-            content.classList.toggle('expanded');
-            toggle.classList.toggle('expanded');
-        }
 
         // Load projects
         fetch('projects.html')
